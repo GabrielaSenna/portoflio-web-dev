@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Gabriela Moreira Senna — Desenvolvedora de Software</title>
+  <meta name="description" content="Portfólio de Gabriela Moreira Senna, desenvolvedora de software em Florianópolis. Desenvolvimento web com Angular, React, PostgreSQL, UX/UI e metodologias ágeis.">
+  <meta name="author" content="Gabriela Moreira Senna">
+  <meta name="theme-color" content="#2F1B1A">
+
+  <!-- Open Graph / redes sociais -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:title" content="Gabriela Moreira Senna — Desenvolvedora de Software">
+  <meta property="og:description" content="Desenvolvimento web, UX/UI e bancos de dados. Conheça meus projetos e vamos conversar.">
+  <meta name="twitter:card" content="summary">
+
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+
+  <!-- Fontes: Fraunces (display, retrô-elegante) + Manrope (texto) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,300..900,0..100,0..1;1,9..144,300..900,0..100,0..1&family=Manrope:wght@400..800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Aplica o tema salvo (ou o do sistema) antes da página pintar -->
+  <script>
+    (function () {
+      var theme = "dark";
+      try {
+        var saved = localStorage.getItem("theme");
+        if (saved === "light" || saved === "dark") theme = saved;
+        else if (window.matchMedia("(prefers-color-scheme: light)").matches) theme = "light";
+      } catch (e) {}
+      document.documentElement.setAttribute("data-theme", theme);
+    })();
+  </script>
+</head>
+<body>
+
+  <!-- ===================== HEADER ===================== -->
+  <header class="header">
+    <div class="container header__inner">
+      <a class="brand" href="#inicio" aria-label="Início">Gabriela <span>Senna</span></a>
+
+      <nav class="nav" id="nav" aria-label="Navegação principal">
+        <ul class="nav__list">
+          <li><a class="nav__link" href="#sobre">Sobre</a></li>
+          <li><a class="nav__link" href="#projetos">Projetos</a></li>
+          <li><a class="nav__link" href="#experiencia">Experiência</a></li>
+          <li><a class="nav__link" href="#formacao">Formação</a></li>
+          <li><a class="nav__link" href="#contato">Contato</a></li>
+        </ul>
+        <a class="btn btn--wine" href="https://wa.me/5548991127985?text=Ol%C3%A1%20Gabriela!%20Vi%20seu%20portf%C3%B3lio%20e%20gostaria%20de%20conversar." target="_blank" rel="noopener">
+          Fale comigo
+        </a>
+      </nav>
+
+      <div class="header__tools">
+        <button class="theme-toggle" type="button" aria-label="Alternar tema claro e escuro">
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.9 4.9l1.4 1.4m11.4 11.4 1.4 1.4M2 12h2m16 0h2M4.9 19.1l1.4-1.4m11.4-11.4 1.4-1.4"/></svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+        </button>
+        <button class="nav-toggle" aria-expanded="false" aria-controls="nav" aria-label="Abrir menu">
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ===================== HERO ===================== -->
+    <section class="hero" id="inicio">
+      <div class="container hero__grid">
+        <div class="hero__content">
+          <span class="eyebrow reveal">Desenvolvedora de Software · Florianópolis, SC</span>
+
+          <h1 class="hero__title reveal" data-delay="1">
+            <span class="script">Portfólio de</span>
+            <span class="display">Gabriela<br>Senna</span>
+          </h1>
+
+          <p class="lead reveal" data-delay="2">
+            Desenvolvedora de Sistemas com experiência em desenvolvimento web, design UX/UI e bancos de dados SQL.
+            Trabalho com Angular, React, PostgreSQL e metodologias ágeis, sempre comprometida com entregas
+            eficientes e comunicação clara.
+          </p>
+
+          <div class="hero__actions reveal" data-delay="3">
+            <a class="btn btn--wine" href="assets/docs/curriculo-gabriela-moreira-senna.pdf" download="Curriculo-Gabriela-Moreira-Senna.pdf">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12m0 0-4-4m4 4 4-4M4 21h16"/></svg>
+              Baixar currículo
+            </a>
+            <a class="btn" href="https://www.linkedin.com/in/gabriela-moreira-senna" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+              LinkedIn
+            </a>
+            <a class="btn btn--olive" href="https://wa.me/5548991127985?text=Ol%C3%A1%20Gabriela!%20Vi%20seu%20portf%C3%B3lio%20e%20gostaria%20de%20conversar." target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+              WhatsApp
+            </a>
+          </div>
+
+          <div class="hero__social reveal" data-delay="3">
+            <span class="hero__social-label">Me encontre em</span>
+            <a class="btn btn--icon" href="https://www.linkedin.com/in/gabriela-moreira-senna" target="_blank" rel="noopener" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            </a>
+            <a class="btn btn--icon" href="mailto:gabrielamsenna@gmail.com?subject=Contato%20pelo%20portf%C3%B3lio" aria-label="E-mail">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="m3 7 9 6 9-6"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Foto recortada saindo de um círculo + selo giratório -->
+        <div class="hero__visual reveal" data-delay="1">
+          <div class="portrait-wrap" data-depth="6">
+            <div class="portrait">
+              <img src="assets/img/perfil-sem-fundo.png" alt="Gabriela Moreira Senna" width="640" height="800" fetchpriority="high">
+            </div>
+            <div class="badge" data-depth="-10" aria-hidden="true">
+              <svg viewBox="0 0 100 100">
+                <defs><path id="circ" d="M50,50 m-38,0 a38,38 0 1,1 76,0 a38,38 0 1,1 -76,0"/></defs>
+                <circle cx="50" cy="50" r="48" fill="var(--bg)" stroke="var(--text)" stroke-width="1"/>
+                <circle cx="50" cy="50" r="26" fill="var(--wine)"/>
+                <text><textPath href="#circ" textLength="236" lengthAdjust="spacing">Desenvolvedora de software ✦ Designer UI/UX ✦</textPath></text>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== MARQUEE ===================== -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <span class="marquee__item">Angular</span>
+        <span class="marquee__item">React</span>
+        <span class="marquee__item">PostgreSQL</span>
+        <span class="marquee__item">UX / UI</span>
+        <span class="marquee__item">Figma</span>
+        <span class="marquee__item">JavaScript</span>
+        <span class="marquee__item">Node.js</span>
+        <span class="marquee__item">Metodologias ágeis</span>
+        <span class="marquee__item">Azure DevOps</span>
+      </div>
+    </div>
+
+    <!-- ===================== SOBRE ===================== -->
+    <section class="section" id="sobre">
+      <div class="container">
+        <div class="about__head">
+          <span class="eyebrow reveal">Sobre mim</span>
+          <h2 class="script reveal" data-delay="1">Olá, eu sou a Gabriela!</h2>
+        </div>
+
+        <div class="about__grid">
+        <div class="about__intro">
+          <div class="about__text reveal" data-delay="2">
+            <p>
+              Sou <strong>Desenvolvedora de Sistemas</strong> e atuo como PJ no desenvolvimento e evolução de
+              soluções tecnológicas. Tenho experiência em desenvolvimento web, design UX/UI e bancos de dados SQL,
+              trabalhando com <strong>Angular, React, PostgreSQL</strong> e metodologias ágeis.
+            </p>
+            <p>
+              Antes disso, fui <strong>docente</strong> na área de desenvolvimento de sistemas no SENAI/SC, ensinando
+              modelagem de sistemas, UI/UX, lógica de programação e banco de dados, e cofundei a Dibba App, onde liderei a
+              equipe de desenvolvimento e as decisões técnicas.
+            </p>
+            <p>
+              Destaco competências analíticas, foco em qualidade e resolução de problemas, sempre comprometida com
+              entregas eficientes e comunicação clara e assertiva.
+            </p>
+          </div>
+
+          <div class="about__places reveal" data-delay="3">
+            <span class="eyebrow">Onde já atuei</span>
+            <div class="logos">
+              <span>Allora Company</span>
+              <span>SENAI/SC</span>
+              <span>Dibba App</span>
+              <span>SESI Saúde</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="stats">
+          <div class="stat reveal" data-delay="1">
+            <span class="stat__num">+5</span>
+            <span class="stat__label"><strong>anos de experiência</strong>em desenvolvimento web, UX/UI e banco de dados</span>
+          </div>
+          <div class="stat reveal" data-delay="2">
+            <span class="stat__num">4</span>
+            <span class="stat__label"><strong>frentes de atuação</strong>front-end, back-end, UX/UI e docência</span>
+          </div>
+          <div class="stat reveal" data-delay="3">
+            <span class="stat__num">3</span>
+            <span class="stat__label"><strong>idiomas</strong>português nativo, espanhol avançado e inglês intermediário</span>
+          </div>
+        </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== PROJETOS ===================== -->
+    <section class="section section--line" id="projetos">
+      <div class="container">
+        <div class="section__head">
+          <h2 class="section__title reveal">
+            <span class="script">o que já fiz</span>
+            <span class="display">Projetos</span>
+          </h2>
+          <p class="section__aside reveal" data-delay="1">
+            Sites publicados e wireframes entregues, do layout no Figma ao código em produção.
+          </p>
+        </div>
+
+        <div class="projects__grid">
+        <article class="card reveal">
+          <a class="card__media" href="https://viventiamedical.com" target="_blank" rel="noopener" aria-label="Visitar site: Viventia Medical">
+            <img src="assets/img/viventia-desktop.jpg" alt="Página inicial do site Viventia Medical" loading="lazy" width="1280" height="800">
+          </a>
+          <div class="card__body">
+            <div class="card__top">
+              <span class="card__index">Projeto 01</span>
+              <span class="card__kind">Site publicado</span>
+            </div>
+            <h3 class="card__title">Viventia Medical</h3>
+            <p class="card__desc">Site institucional para uma clínica de psiquiatria premium: tipografia serifada, paleta quente e uma experiência que transmite acolhimento, da filosofia da clínica ao agendamento de consulta.</p>
+            <div class="card__footer">
+              <ul class="tags"><li class="tag">Next.js</li><li class="tag">React</li><li class="tag">Tailwind CSS</li></ul>
+              <a class="link-arrow" href="https://viventiamedical.com" target="_blank" rel="noopener">Visitar site <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="card reveal" data-delay="2">
+          <a class="card__media" href="https://universaljuntas.com.br" target="_blank" rel="noopener" aria-label="Visitar site: Universal Juntas">
+            <img src="assets/img/universaljuntas-desktop.jpg" alt="Página inicial do site Universal Juntas" loading="lazy" width="1280" height="800">
+          </a>
+          <div class="card__body">
+            <div class="card__top">
+              <span class="card__index">Projeto 02</span>
+              <span class="card__kind">Site publicado</span>
+            </div>
+            <h3 class="card__title">Universal Juntas</h3>
+            <p class="card__desc">Site institucional para uma indústria de juntas e vedações com mais de 40 anos e certificação ISO 9001: história, linhas de aplicação, catálogo de produtos, blog e solicitação de orçamento.</p>
+            <div class="card__footer">
+              <ul class="tags"><li class="tag">Next.js</li><li class="tag">React</li><li class="tag">Tailwind CSS</li></ul>
+              <a class="link-arrow" href="https://universaljuntas.com.br" target="_blank" rel="noopener">Visitar site <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="card reveal">
+          <a class="card__media" href="assets/img/dibba-wireframes.jpg" target="_blank" rel="noopener" aria-label="Ver wireframes: Dibba App">
+            <img src="assets/img/dibba-cover.jpg" alt="Telas do wireframe do Dibba App: página do evento e cadastro de lista VIP" loading="lazy" width="1280" height="800">
+          </a>
+          <div class="card__body">
+            <div class="card__top">
+              <span class="card__index">Projeto 03</span>
+              <span class="card__kind">Wireframe · App de ingressos</span>
+            </div>
+            <h3 class="card__title">Dibba App</h3>
+            <p class="card__desc">Plataforma de venda de ingressos online em que fui sócia fundadora e designer UX/UI: página do evento com seleção de lotes, fluxo de compra em etapas e cadastro de listas VIP para promoters.</p>
+            <div class="card__footer">
+              <ul class="tags"><li class="tag">Figma</li><li class="tag">UX / UI</li><li class="tag">Wireframe</li></ul>
+              <a class="link-arrow" href="assets/img/dibba-wireframes.jpg" target="_blank" rel="noopener">Ver wireframes <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="card reveal" data-delay="2">
+          <a class="card__media" href="assets/img/spots-wireframe.jpg" target="_blank" rel="noopener" aria-label="Ver wireframe: Spots">
+            <img src="assets/img/spots-wireframe.jpg" alt="Wireframe da página inicial da Spots, coworking" loading="lazy" width="673" height="2000">
+          </a>
+          <div class="card__body">
+            <div class="card__top">
+              <span class="card__index">Projeto 04</span>
+              <span class="card__kind">Wireframe · Coworking</span>
+            </div>
+            <h3 class="card__title">Spots</h3>
+            <p class="card__desc">Wireframe entregue para um coworking moderno e completo: apresentação dos planos Spotter Premium, Weekly e One, unidades por cidade, orçamento e contratação, com identidade em laranja e preto.</p>
+            <div class="card__footer">
+              <ul class="tags"><li class="tag">Figma</li><li class="tag">UX / UI</li><li class="tag">Wireframe</li></ul>
+              <a class="link-arrow" href="assets/img/spots-wireframe.jpg" target="_blank" rel="noopener">Ver wireframe <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></a>
+            </div>
+          </div>
+        </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== EXPERIÊNCIA ===================== -->
+    <section class="section section--line" id="experiencia">
+      <div class="container">
+        <div class="section__head">
+          <h2 class="section__title reveal">
+            <span class="script">minha trajetória</span>
+            <span class="display">Experiência</span>
+          </h2>
+          <p class="section__aside reveal" data-delay="1">
+            Do estágio em saúde digital à docência e ao desenvolvimento de sistemas como PJ.
+          </p>
+        </div>
+
+        <div class="timeline">
+          <article class="job reveal">
+            <div class="job__period">Jan 2026 – Atual<small>Florianópolis · híbrido</small></div>
+            <div class="job__body">
+              <h3 class="job__role">Desenvolvedora de Sistemas (PJ)</h3>
+              <span class="job__company">Allora Company</span>
+              <p class="job__desc">
+                Desenvolvimento e manutenção de sistemas web, implementação de novas funcionalidades e melhorias
+                evolutivas, integração com APIs e serviços externos, participação em rituais ágeis e aplicação de boas
+                práticas e testes para garantia de qualidade.
+              </p>
+            </div>
+          </article>
+
+          <article class="job reveal">
+            <div class="job__period">Ago 2023 – Fev 2026<small>Florianópolis · presencial</small></div>
+            <div class="job__body">
+              <h3 class="job__role">Especialista de Ensino</h3>
+              <span class="job__company">SENAI/SC</span>
+              <p class="job__desc">
+                Aulas práticas e teóricas nos cursos técnicos de desenvolvimento de sistemas (Modelagem de Sistemas,
+                Fundamentos de UI/UX, Lógica de Programação, Banco de Dados II), planejamento de atividades didáticas e
+                avaliações, orientação de estudantes em projetos práticos de desenvolvimento e inovação.
+              </p>
+            </div>
+          </article>
+
+          <article class="job reveal">
+            <div class="job__period">Abr 2021 – Dez 2023<small>Florianópolis · remoto</small></div>
+            <div class="job__body">
+              <h3 class="job__role">Desenvolvedora de Software, Sócia Fundadora e Designer UX/UI</h3>
+              <span class="job__company">Dibba App</span>
+              <p class="job__desc">
+                Desenvolvimento front-end e integração com APIs, criação de protótipos e layouts no Figma, participação
+                na definição de produtos e estratégias de crescimento, liderança da equipe de desenvolvimento e das
+                decisões técnicas.
+              </p>
+            </div>
+          </article>
+
+          <article class="job reveal">
+            <div class="job__period">Mar 2022 – Ago 2023<small>Florianópolis · híbrido</small></div>
+            <div class="job__body">
+              <h3 class="job__role">Estagiária em Desenvolvimento Full-Stack</h3>
+              <span class="job__company">Centro de Inovação SESI em Tecnologias para Saúde</span>
+              <p class="job__desc">
+                Desenvolvimento e manutenção de aplicações web full-stack, definição de requisitos e implementação de
+                novas funcionalidades, testes e correções de bugs, metodologias ágeis no acompanhamento de tarefas e
+                entregas.
+              </p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== FORMAÇÃO / HABILIDADES ===================== -->
+    <section class="section section--line" id="formacao">
+      <div class="container">
+        <div class="section__head">
+          <h2 class="section__title reveal">
+            <span class="script">base e ferramentas</span>
+            <span class="display">Formação</span>
+          </h2>
+        </div>
+
+        <div class="cards">
+          <div class="panel reveal">
+            <h3 class="panel__title">Educação</h3>
+            <ul class="edu">
+              <li class="edu__item">
+                <strong>Bacharelado em Ciência da Informação</strong>
+                <span>Universidade Federal de Santa Catarina (UFSC) · 2023 – atual</span>
+              </li>
+              <li class="edu__item">
+                <strong>Técnico em Desenvolvimento de Sistemas</strong>
+                <span>SENAI/SC · 2020 – 2022</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="panel reveal" data-delay="1">
+            <h3 class="panel__title">Habilidades</h3>
+            <ul class="chips">
+              <li class="chip">Angular</li>
+              <li class="chip">React</li>
+              <li class="chip">JavaScript</li>
+              <li class="chip">Node.js</li>
+              <li class="chip">HTML &amp; CSS</li>
+              <li class="chip">PostgreSQL</li>
+              <li class="chip">SQL</li>
+              <li class="chip">Figma (UX/UI)</li>
+              <li class="chip">Azure DevOps</li>
+              <li class="chip">Trello</li>
+              <li class="chip">Metodologias ágeis</li>
+            </ul>
+          </div>
+
+          <div class="panel reveal" data-delay="2">
+            <h3 class="panel__title">Idiomas</h3>
+            <ul class="lang">
+              <li>
+                <div class="lang__row">Português <span>nativo</span></div>
+                <div class="lang__bar"><i style="width: 100%"></i></div>
+              </li>
+              <li>
+                <div class="lang__row">Espanhol <span>avançado</span></div>
+                <div class="lang__bar"><i style="width: 85%"></i></div>
+              </li>
+              <li>
+                <div class="lang__row">Inglês <span>intermediário</span></div>
+                <div class="lang__bar"><i style="width: 60%"></i></div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== CONTATO ===================== -->
+    <section class="section contact" id="contato">
+      <div class="container">
+        <div class="contact__grid">
+          <div>
+            <h2 class="section__title reveal">
+              <span class="script">gostou do que viu?</span>
+              <span class="display">Vamos<br>conversar</span>
+            </h2>
+            <p class="lead reveal" data-delay="1">
+              Estou aberta a novos projetos, parcerias e oportunidades. Me chame no WhatsApp ou envie um e-mail
+              e vamos construir algo juntos.
+            </p>
+
+            <div class="contact__actions reveal" data-delay="2">
+              <a class="btn btn--olive" href="https://wa.me/5548991127985?text=Ol%C3%A1%20Gabriela!%20Vi%20seu%20portf%C3%B3lio%20e%20gostaria%20de%20conversar." target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+                WhatsApp
+              </a>
+              <a class="btn btn--cream" href="mailto:gabrielamsenna@gmail.com?subject=Contato%20pelo%20portf%C3%B3lio">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="m3 7 9 6 9-6"/></svg>
+                E-mail
+              </a>
+              <a class="btn" href="https://www.linkedin.com/in/gabriela-moreira-senna" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                LinkedIn
+              </a>
+              <a class="btn" href="assets/docs/curriculo-gabriela-moreira-senna.pdf" download="Curriculo-Gabriela-Moreira-Senna.pdf">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12m0 0-4-4m4 4 4-4M4 21h16"/></svg>
+                Baixar currículo
+              </a>
+            </div>
+          </div>
+
+          <dl class="contact__info reveal" data-delay="2">
+            <div>
+              <dt>WhatsApp</dt>
+              <dd><a href="https://wa.me/5548991127985" target="_blank" rel="noopener">(48) 99112-7985</a></dd>
+            </div>
+            <div>
+              <dt>E-mail</dt>
+              <dd><a href="mailto:gabrielamsenna@gmail.com">gabrielamsenna@gmail.com</a></dd>
+            </div>
+            <div>
+              <dt>LinkedIn</dt>
+              <dd><a href="https://www.linkedin.com/in/gabriela-moreira-senna" target="_blank" rel="noopener">www.linkedin.com/in/gabriela-moreira-senna</a></dd>
+            </div>
+            <div>
+              <dt>Localização</dt>
+              <dd>Florianópolis – SC, Brasil</dd>
+            </div>
+          </dl>
+        </div>
+
+        <footer class="footer">
+          <span>© <span data-year>2026</span> Gabriela Moreira Senna. Todos os direitos reservados.</span>
+          <a href="#inicio">Voltar ao topo ↑</a>
+        </footer>
+      </div>
+    </section>
+  </main>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>
